@@ -1,11 +1,22 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <div class="navbar">
-            <a class="cur" href="index.html">Home</a>
-        </div>
+	<link rel="stylesheet" href="index.css">
+	<style>
+	.formDiv { display: flex; justify-content: center; margin-top: 100px; }
+	form { border: 4px solid black; padding: 10px; }
+	</style>
     </head>
     <body>
+		<div class="navbar">
+			<div><p>
+				<a href="index.html">Home</a>
+				</p></div>
+			<div class="login">
+				<span class="loginRef"><a href="Login.html">Log in</a></span>
+			</div>
+		</div>
+		<div class="formDiv">
         <form>
             <b>Welcome to Website</b><br>
             <a href="#">Create an account</a><br>
@@ -18,4 +29,5 @@
                 <span><a href="#">Forgot password?</a></span>
             </div>
         </form>
+		</div>
     </body>
