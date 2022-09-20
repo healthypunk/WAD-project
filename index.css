@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+.navbar {	
+	display: flex;
+	flex-direction: row;
+	margin-top: 15px;
+	padding: 10px;
+	gap: 10px;
+	justify-content: center;
+}
+
+
+.navbar > div {
+	flex: 1;
+	background-color: #F0FFFF;
+	border-radius: 25px;
+	border: 3px solid #6495ED;
+	padding: 10px 30px;
+}
+
+.navbar > div > p {
+	text-align: center;
+}
+
+.login {
+	flex-grow: 2;
+}
+
+.loginRef {
+	position: absolute;
+	top: 40px;
+	right: 30px;
+	
+}
+
+.inlineDivs {
+	display: flex;
+}
+
+.inlineDivs > div {
+	display: inline-block;
+	
+}
+
+.sidebar {
+	border-radius: 25px;
+	border: 3px solid #6495ED;
+	flex-grow: 1;
+	height: 100vh;
+	background-color: #F0FFFF;
+}
+
+.postwindow {
+	flex-grow: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	border: 3px solid black;
+	margin: 10px;
+	padding: 10px;
+	height: 100vh;
+	overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.postwindow > div {
+	width: 500px;
+	height: 300px;
+	border: 3px solid black;
+	margin: 10px;
+}
