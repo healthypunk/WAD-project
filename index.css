@@ -87,3 +87,10 @@ body {
 .addPostPanel textarea {
 	resize:none;
 }
+
+.addPostPanel button {
+	margin-top: 35px;
+	width: 200px;
+	height: 30px;
+}
+
