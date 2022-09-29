@@ -27,17 +27,6 @@ body {
 	text-align: center;
 }
 
-.login {
-	flex-grow: 2;
-}
-
-.loginRef {
-	position: absolute;
-	top: 40px;
-	right: 30px;
-	
-}
-
 .inlineDivs {
 	display: flex;
 }
