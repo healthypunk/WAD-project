@@ -1,8 +1,13 @@
+* {
+	font-family: 'Zilla Slab', serif;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
+  background: url(back.jpg) repeat;
 }
 
 .navbar {	
@@ -19,12 +24,15 @@ body {
 	flex: 1;
 	background-color: #F0FFFF;
 	border-radius: 25px;
-	border: 3px solid #6495ED;
+	border: 3px solid #b8c7e37e;
 	padding: 10px 30px;
 }
 
 .navbar > div > p {
 	text-align: center;
+	font-size: medium;
+	font-size: large;
+	font-weight: bold;
 }
 
 .inlineDivs {
@@ -38,10 +46,16 @@ body {
 
 .sidebar {
 	border-radius: 25px;
-	border: 3px solid #6495ED;
+	border: 3px solid #b8c7e37e;
 	flex-grow: 1;
 	height: 100vh;
-	background-color: #F0FFFF;
+	background-color: rgba(255, 255, 255, 0.783);
+	padding-inline: 15px;
+	margin-inline: 15px;
+}
+
+.postwindow > div:hover {
+	transform: scale(1.1);
 }
 
 .postwindow {
@@ -50,7 +64,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-	border: 3px solid black;
+	border: 3px solid #b8c7e37e;
 	margin: 10px;
 	padding: 10px;
 	height: 100vh;
@@ -59,10 +73,69 @@ body {
 }
 
 .postwindow > div {
-	width: 500px;
-	height: 300px;
-	border: 3px solid black;
+	border-style: outset;
+	box-sizing: content-box;
+	width: 60%;
+	border-radius: 25px;
 	margin: 10px;
+	background-color: rgba(180, 207, 218, 0.4);
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+	
+
+}
+
+div.postwindow p {
+	margin: 5%;
+	font-weight: normal;
+	color: #000000;
+	text-align: left;
+	padding-left: 21px;
+	padding-top: 5px;
+    
+  }
+
+  div + .login {
+	text-align: center;
+	font-size: medium;
+	font-size: large;
+	font-weight: bold;
+  }
+
+
+
+
+.pic1 {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	width: 445px;
+	height: 280px;
+	padding-top: 20px;
+	position: relative;
+	
+}
+
+div.postwindow h1{
+	vertical-align: top;
+	float: left;
+	padding-left: 50px;
+	position: relative;
+	margin: auto;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	
+}
+
+div.postwindow h2{
+	vertical-align: top;
+	float: right;
+	padding-right: 50px;
+	font-size: small;
+	position: relative;
+	margin: auto;
+	padding-top: 10px;
 }
 
 .addPostPanel {
@@ -92,5 +165,23 @@ body {
 	margin-top: 35px;
 	width: 200px;
 	height: 30px;
+}
+
+.navbar a:hover {
+    background-color: rgba(180, 207, 218, 0.4);
+    color: #9da7b4;
+             }
+
+.footer {
+	text-align: center;
+	text-decoration-color: #34495e;
+	font-size: medium;
+	font-style: italic;
+	border: 3px solid #b8c7e37e;
+	background-color: rgba(255, 255, 255, 0.783);
+}
+
+ul {
+	list-style-type: none;
 }
 
