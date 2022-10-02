@@ -87,15 +87,15 @@ body {
 
 }
 
-div.postwindow p {
+div.postwindow h2 ~ p {
 	margin: 5%;
 	font-weight: normal;
 	color: #000000;
 	text-align: left;
 	padding-left: 10px;
 	padding-top: 7px;
-    
-  }
+}
+
 
   div + .navbar {
 	text-align: center;
