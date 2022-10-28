@@ -31,7 +31,6 @@ body {
 
 .navbar > div > p {
 	text-align: center;
-	font-size: medium;
 	font-size: large;
 	font-weight: bold;
 }
@@ -93,7 +92,7 @@ div.postwindow h2 ~ p {
 	font-weight: normal;
 	color: #000000;
 	text-align: left;
-	padding-left: 10px;
+	padding-left: 20px;
 	padding-top: 7px;
 }
 
@@ -113,15 +112,15 @@ div.postwindow h2 ~ p {
   }
 
 
-.pic1 {
+a.pic1 {
 	display: flex;
-	margin-left: auto;
-    margin-right: auto;
 	width: 445px;
 	height: 280px;
 	padding-top: 20px;
 	position: relative;
-	
+	padding-bottom: 10px;
+	float: left;
+	right: 32px;
 }
 
 div.postwindow h1{
@@ -132,6 +131,7 @@ div.postwindow h1{
 	margin: auto;
 	padding-top: 2px;
 	padding-bottom: 2px;
+	display: flex;
 }
 
 div.postwindow h2{
@@ -200,7 +200,7 @@ form {
 	border-radius: 3px;
 	box-sizing: content-box;
 	width: 20%;
-	text-align: auto;
+	text-align: left;
 	font-size: larger;
 	padding: 10px;
 	background-color: rgba(255, 255, 255, 0.783);
