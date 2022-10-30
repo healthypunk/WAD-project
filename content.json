@@ -4,7 +4,7 @@
       "id": 1,
       "by":{
         "userId": 20004,
-        "name": "Eboldas"
+        "name": "Evaldas"
       },
       "dateCreated": "2022-10-25T12:00:00+2:00",
       "content": [
@@ -78,6 +78,92 @@
         {
           "type": "text",
           "value": "Cute capybara pic from Japan xoxo"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "by":{
+        "userId": 20009,
+        "name": "User"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "pic",
+          "value": "pics/pen.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Hi, Im User!"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "by":{
+        "userId": 20010,
+        "name": "User2"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "text",
+          "value": "I think that Vue is better than React."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "by":{
+        "userId": 20011,
+        "name": "User3"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "pic",
+          "value": "pics/pen.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Guys look, a cat!!!"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "by":{
+        "userId": 20012,
+        "name": "User4"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "pic",
+          "value": "pics/pen.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Just read this book, its great!"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "by":{
+        "userId": 20013,
+        "name": "User5"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "pic",
+          "value": "pics/pen.jpg"
+        },
+        {
+          "type": "text",
+          "value": "I love JavaScript!"
         }
       ]
     }
