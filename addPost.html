@@ -13,9 +13,14 @@
                 <a href="index.html">Home</a>
             </p></div>
             <div class="login">
-                <span class="loginRef"><a href="Login.html"><img src="pics/ico.png" width="45" height="45"></a></span>
+                <button onclick="changeListStyle()" class="dropbtn"><a class="loginRef"><img src="pics/ico.png" width="45" height="45"></a></button>
+				<div id="myDropdown" class="dropdown-content">
+					<a href="#">John Doe</a>
+					<a href="#">john.doe@ut.ee</a>
+					<a href="#">logout</a>
             </div>
         </div>
+    </div>
         <div class="addPostPanel">
             <div>
                 <p>Post Body</p>
@@ -30,3 +35,5 @@
             </div>
         </div>
     </body>
+
+    <script type="text/javascript" src="dropdown.js"></script>

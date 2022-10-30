@@ -55,10 +55,10 @@ function renderPost(post) {
     div.appendChild(p)
     posts.appendChild(div)
 }
-
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+//   //function that changes style of all the list and is called out by a button
+// function changeListStyle() {
+//     document.getElementById("myDropdown").classList.toggle("show");
+// }
 
 // var drop_img = document.getElementById("pics/ico.png");
 // drop_img.onclick = function(event) {
