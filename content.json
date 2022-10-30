@@ -90,10 +90,6 @@
       "dateCreated": "2022-10-25T12:00:00+2:00",
       "content": [
         {
-          "type": "pic",
-          "value": "pics/pen.jpg"
-        },
-        {
           "type": "text",
           "value": "Hi, Im User!"
         }
@@ -123,7 +119,7 @@
       "content": [
         {
           "type": "pic",
-          "value": "pics/pen.jpg"
+          "value": "pics/cat.jpg"
         },
         {
           "type": "text",
@@ -141,7 +137,7 @@
       "content": [
         {
           "type": "pic",
-          "value": "pics/pen.jpg"
+          "value": "pics/book.jpg"
         },
         {
           "type": "text",
@@ -159,7 +155,7 @@
       "content": [
         {
           "type": "pic",
-          "value": "pics/pen.jpg"
+          "value": "pics/javascript.jpg"
         },
         {
           "type": "text",
