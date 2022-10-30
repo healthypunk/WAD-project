@@ -110,15 +110,15 @@ div.postwindow h2 ~ p {
   }
 
 
-a.pic1 {
+a.pic1,img.pic1 {
 	display: flex;
-	width: 445px;
-	height: 280px;
+	width: 100%;
+	height: 100%;
 	padding-top: 20px;
 	position: relative;
 	padding-bottom: 10px;
 	float: left;
-	right: 32px;
+	right: -32px;
 }
 
 div.postwindow h1{
