@@ -22,7 +22,17 @@ mock = [{
 //};
 
 window.onload = function () {
-    fetchRemote()
+    fetchLocal()
+}
+
+function fetchLocal() {
+    const url = "./json/content.json"
+    fetch(url)
+        .then(res => {return res.json()})
+        .then(json => {
+            json.results.forEach(renderPost)
+        })
+        .catch(error => console.log(error))
 }
 
 function fetchRemote() {
