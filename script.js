@@ -17,9 +17,34 @@ mock = [{
     ]
   }]
 
+//window.onload = function () {
+//    mock.forEach(renderPost)
+//};
+
 window.onload = function () {
-    mock.forEach(renderPost)
-};
+    fetchRemote()
+}
+
+function fetchRemote() {
+    const url = "https://api.jsonbin.io/v3/b/635e7dcd0e6a79321e394afa"
+    const masterKey = "$2b$10$G3PTuY1X1TSPRBY58WDJoO1ngDItsWQEnrTM.PGLhWawWCpz6YiRa"
+
+    const params = {
+        headers: {
+            "content-type": "application/json; charset=UTF-8",
+            "X-MASTER-KEY": masterKey
+        },
+        method: "GET"
+    }
+    fetch(url, params)
+        .then(result => {return result.json()})
+        .then(res => {
+            const posts = res.record.results
+            posts.forEach(renderPost)
+        })
+        .catch(error => console.log(error))
+
+}
 
 function renderPost(post) {
     let posts = document.getElementById("postwindow");
