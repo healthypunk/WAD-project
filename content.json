@@ -1,0 +1,86 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "by":{
+        "userId": 20004,
+        "name": "Eboldas"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "pic",
+          "value": "pics/pen.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Who left a pen in the audience?"
+        }
+      ]
+    },
+   {
+      "id": 2,
+      "by":{
+        "userId": 20005,
+        "name": "Mark Fishel"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "text",
+          "value": "How many homeworks do I need to submit to complete the course?"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "by":{
+        "userId": 20006,
+        "name": "Richard Kuklane"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "text",
+          "value": "Are there any lectures tomorrow?"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "by":{
+        "userId": 20007,
+        "name": "Makima"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {
+          "type": "pic",
+          "value": "pics/math.png"
+        },
+        {
+          "type": "text",
+          "value": "Here are my notes from maths' lecture"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "by":{
+        "userId": 20008,
+        "name": "quandale dingle"
+      },
+      "dateCreated": "2022-10-25T12:00:00+2:00",
+      "content": [
+        {"type": "pic",
+          "value": "pics/capy.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Cute capybara pic from Japan xoxo"
+        }
+      ]
+    }
+  ],
+  "size":5
+}
