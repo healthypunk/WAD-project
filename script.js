@@ -57,28 +57,28 @@ function fetchRemote() {
 }
 
 function renderPost(post) {
-    let posts = document.getElementById("postwindow");
-    let div = document.createElement("div");
-    let logo = document.createElement("h1");
+    const posts = document.getElementById("postwindow");
+    const div = document.createElement("div");
+    const logo = document.createElement("h1");
     logo.innerHTML = '<a class="logo"><img src="pics/ico.png" width="32" height="32" alt=""></a>';
-    let h2 = document.createElement("h2"); //date
-    let p = document.createElement("p"); //text
-    let a = document.createElement("a")
+    const h2 = document.createElement("h2"); //date
+    const p = document.createElement("p"); //text
+    const a = document.createElement("a")
     a.className = 'pic1'
-    let img = document.createElement("img")
+    const img = document.createElement("img")
     // p.innerText = post.content.text
-    let date = new Date(post.dateCreated.split('T')[0]);
-    let date2 = date.toLocaleString('en-UK', { day : "2-digit", month: 'short', year: 'numeric'})
+    const date = new Date(post.dateCreated.split('T')[0]);
+    const date2 = date.toLocaleString('en-UK', { day : "2-digit", month: 'short', year: 'numeric'})
     //console.log(post.content)
     for (let object of post.content){
-        if (object.type == "pic"){
+        if (object.type === "pic"){
             img.src = object.value
             img.style.width = "445px"
             img.style.length = "280px"
             a.appendChild(img)
 
         }
-        if (object.type == "text"){
+        if (object.type === "text"){
             p.innerText = object.value
         }
     }
