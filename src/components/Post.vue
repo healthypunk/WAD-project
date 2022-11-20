@@ -5,25 +5,38 @@
     <a v-if = "pic"
         class="pic1"><img :src="`/pics/${pic}`" :alt="pic" ></a>
     <p>{{text}}</p>
+    <div class="likebutton">
+      <a class="like" v-on:click="likes++">
+        <img src="@/assets/heart.png" />
+      </a>
+      <p>{{likes}}</p>
+    </div>
   </div>
 </template>
 
 <script>
 import post from "@/components/Post";
+import LikeButton from "@/components/LikeButton";
 
 export default {
   name: "Post",
+  components: {LikeButton},
   props: ['post'],
+  data() {
+    return {
+      likes: this.post.likes
+    }
+  },
   computed: {
     pic(){
-      return  this.post.content.filter(object => object.type === 'pic')[0]?.value
+      return this.post.content.filter(object => object.type === 'pic')[0]?.value
     },
     text(){
       return this.post.content.filter(object => object.type === 'text')[0]?.value
     },
     date() {
       const date = new Date(this.post.dateCreated.split('T')[0]);
-      const date2 = date.toLocaleString('en-UK', { day : "2-digit", month: 'short', year: 'numeric'})
+      const date2 = date.toLocaleString('en-UK', {day: "2-digit", month: 'short', year: 'numeric'})
       return date2
     }
   }
@@ -41,12 +54,13 @@ export default {
   height: 3.6vw;
   width: 3.6vw;
 }
-div {
+
+.post {
   display: grid;
   grid-template-areas:
     "l u s d r"
     "l p p p r"
-    "l t t t r";
+    "l t t h r";
   grid-template-columns: 1px 14fr 27fr 14fr 1px;
   grid-template-rows: 5vw 28vw 5vw;
   grid-gap: 1vw;
@@ -65,9 +79,14 @@ div {
 .no-img{
   grid-template-areas:
     "l u s d r"
-    "l t t t r";
+    "l t t h r";
   grid-template-columns: 1px 14fr 27fr 14fr 1px;
   grid-template-rows: 3vw 5vw;
+}
+
+.likebutton {
+  grid-area: h;
+  justify-self: end;
 }
 
 .pic1 p {

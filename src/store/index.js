@@ -10,7 +10,8 @@ export default createStore({
                 "content": [
                     {"type": "pic", "value": "pen.jpg"},
                     {"type": "text", "value": "Who left a pen in the audience?"}
-                ]
+                ],
+                "likes": 9
             },
             {
                 "id": 2,
@@ -18,7 +19,8 @@ export default createStore({
                 "dateCreated": "2022-10-25T12:00:00+2:00",
                 "content": [
                     {"type": "text", "value": "How many homeworks do I need to submit to complete the course?"}
-                ]
+                ],
+                "likes": 1
             },
             {
                 "id": 3,
@@ -26,7 +28,8 @@ export default createStore({
                 "dateCreated": "2022-10-25T12:00:00+2:00",
                 "content": [
                     {"type": "text", "value": "Are there any lectures tomorrow?"}
-                ]
+                ],
+                "likes": 12
             },
             {
                 "id": 4,
@@ -38,7 +41,8 @@ export default createStore({
                         "value": "math.png"
                     },
                     {"type": "text", "value": "Here are my notes from maths' lecture"}
-                ]
+                ],
+                "likes": 4
             },
             {
                 "id": 5,
@@ -47,7 +51,8 @@ export default createStore({
                 "content": [
                     {"type": "pic", "value": "capy.jpg"},
                     {"type": "text", "value": "Cute capybara pic from Japan xoxo"}
-                ]
+                ],
+                "likes": 100
             },
             {
                 "id": 6,
@@ -55,7 +60,8 @@ export default createStore({
                 "dateCreated": "2022-10-25T12:00:00+2:00",
                 "content": [
                     {"type": "text", "value": "Hi, Im User!"}
-                ]
+                ],
+                "likes": 3
             },
             {
                 "id": 7,
@@ -63,7 +69,8 @@ export default createStore({
                 "dateCreated": "2022-10-25T12:00:00+2:00",
                 "content": [
                     {"type": "text", "value": "I think that Vue is better than React."}
-                ]
+                ],
+                "likes": 8
             },
             {
                 "id": 8,
@@ -72,7 +79,8 @@ export default createStore({
                 "content": [
                     {"type": "pic", "value": "cat.jpg"},
                     {"type": "text", "value": "Guys look, a cat!!!"}
-                ]
+                ],
+                "likes": 0
             },
             {
                 "id": 9,
@@ -81,7 +89,8 @@ export default createStore({
                 "content": [
                     {"type": "pic", "value": "book.jpg"},
                     {"type": "text", "value": "Just read this book, its great!"}
-                ]
+                ],
+                "likes": 69
             },
             {
                 "id": 10,
@@ -90,7 +99,8 @@ export default createStore({
                 "content": [
                     {"type": "pic", "value": "javascript.jpg"},
                     {"type": "text", "value": "I love JavaScript!"}
-                ]
+                ],
+                "likes": 11
             }
         ]
     },
