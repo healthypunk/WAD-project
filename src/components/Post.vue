@@ -5,7 +5,12 @@
     <a v-if = "pic"
         class="pic1"><img :src="`/pics/${pic}`" :alt="pic" ></a>
     <p>{{text}}</p>
-    <like-button :value="`${likes}`" />
+    <div class="likebutton">
+      <a class="like" v-on:click="likes++">
+        <img src="@/assets/heart.png" />
+      </a>
+      <p>{{likes}}</p>
+    </div>
   </div>
 </template>
 
@@ -16,17 +21,22 @@ import LikeButton from "@/components/LikeButton";
 export default {
   name: "Post",
   components: {LikeButton},
-  props: ['post', 'likes'],
+  props: ['post'],
+  data() {
+    return {
+      likes: this.post.likes
+    }
+  },
   computed: {
     pic(){
-      return  this.post.content.filter(object => object.type === 'pic')[0]?.value
+      return this.post.content.filter(object => object.type === 'pic')[0]?.value
     },
     text(){
       return this.post.content.filter(object => object.type === 'text')[0]?.value
     },
     date() {
       const date = new Date(this.post.dateCreated.split('T')[0]);
-      const date2 = date.toLocaleString('en-UK', { day : "2-digit", month: 'short', year: 'numeric'})
+      const date2 = date.toLocaleString('en-UK', {day: "2-digit", month: 'short', year: 'numeric'})
       return date2
     }
   }

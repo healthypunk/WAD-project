@@ -12,10 +12,9 @@
 export default {
   name: "LikeButton",
   props: ['value'],
-  computed: {
-    count: {
-      get() {return this.value},
-      set(newValue) { this.$emit('input', newValue)}
+  data() {
+    return {
+      count: this.value
     }
   }
 }

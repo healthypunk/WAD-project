@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <div class="postwindow" >
-      <post v-for = "post in postList" :key="post.id"
-            :post = "post"
-            :likes = "Math.ceil(Math.random()*10)"/>
+    <div class="postwindow" ref="postWindowsRef">
+      <post v-for = "post in postList" :key="post.id" ref="postRef"
+            :post = "post" />
     </div>
+    <button class="resetLikes" v-on:click="resetLikes">Reset likes</button>
   </div>
 </template>
 
@@ -18,6 +18,11 @@ export default {
   components: {
     Post,
     Header
+  },
+  methods: {
+    resetLikes: function () {
+      this.$refs.postRef.forEach(post => post.likes = 0)
+    }
   },
   computed: {
   postList(){
@@ -35,5 +40,8 @@ export default {
   align-content: center;
   margin: 10px 10px 10px;
   padding: 10px;
+}
+.resetLikes {
+  width: 100%;
 }
 </style>
