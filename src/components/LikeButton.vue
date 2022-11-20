@@ -1,8 +1,10 @@
 <template>
-  <a class="like" v-on:click="count++">
-    <img src="@/assets/heart.png" />
-  </a>
-  <p>{{count}}</p>
+  <div class="likebutton">
+    <a class="like" v-on:click="count++">
+      <img src="@/assets/heart.png" />
+    </a>
+    <p>{{count}}</p>
+  </div>
 </template>
 
 <script>

@@ -45,17 +45,12 @@ export default {
   width: 3.6vw;
 }
 
-like-button {
-  grid-area: b;
-  justify-self: start;
-}
-
-div {
+.post {
   display: grid;
   grid-template-areas:
     "l u s d r"
     "l p p p r"
-    "l t t t r";
+    "l t t h r";
   grid-template-columns: 1px 14fr 27fr 14fr 1px;
   grid-template-rows: 5vw 28vw 5vw;
   grid-gap: 1vw;
@@ -74,9 +69,14 @@ div {
 .no-img{
   grid-template-areas:
     "l u s d r"
-    "l t t t r";
+    "l t t h r";
   grid-template-columns: 1px 14fr 27fr 14fr 1px;
   grid-template-rows: 3vw 5vw;
+}
+
+.likebutton {
+  grid-area: h;
+  justify-self: end;
 }
 
 .pic1 p {
