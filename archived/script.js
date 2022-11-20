@@ -90,21 +90,3 @@ function renderPost(post) {
     div.appendChild(p)
     posts.appendChild(div)
 }
-//   //function that changes style of all the list and is called out by a button
-// function changeListStyle() {
-//     document.getElementById("myDropdown").classList.toggle("show");
-// }
-
-// var drop_img = document.getElementById("pics/ico.png");
-// drop_img.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn')) {
-//         var dropdowns = document.getElementsByClassName("dropdown-content");
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//             var openDropdown = dropdowns[i];
-//             if (openDropdown.classList.contains('show')) {
-//                 openDropdown.classList.remove('show');
-//             }
-//         }
-//     }
-// }
