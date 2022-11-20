@@ -1,12 +1,17 @@
 <template>
   <div class="signup">
     <h1>This is a signup</h1>
-    <like-button value="0"/>
+    <SignUp></SignUp>
   </div>
 </template>
 <script>
-import LikeButton from "@/components/LikeButton";
+// @ is an alias to /src
+import SignUp from "@/components/SignUp";
+
 export default {
-  components: {LikeButton}
+  name: 'SignUpView',
+  components: {
+    SignUp
+  },
 }
 </script>
