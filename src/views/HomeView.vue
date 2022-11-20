@@ -2,7 +2,8 @@
   <div class="home">
     <div class="postwindow" >
       <post v-for = "post in postList" :key="post.id"
-            :post = "post"/>
+            :post = "post"
+            :likes = "Math.ceil(Math.random()*10)"/>
     </div>
   </div>
 </template>

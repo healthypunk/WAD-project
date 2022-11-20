@@ -5,15 +5,18 @@
     <a v-if = "pic"
         class="pic1"><img :src="`/pics/${pic}`" :alt="pic" ></a>
     <p>{{text}}</p>
+    <like-button :value="`${likes}`" />
   </div>
 </template>
 
 <script>
 import post from "@/components/Post";
+import LikeButton from "@/components/LikeButton";
 
 export default {
   name: "Post",
-  props: ['post'],
+  components: {LikeButton},
+  props: ['post', 'likes'],
   computed: {
     pic(){
       return  this.post.content.filter(object => object.type === 'pic')[0]?.value
@@ -41,6 +44,12 @@ export default {
   height: 3.6vw;
   width: 3.6vw;
 }
+
+like-button {
+  grid-area: b;
+  justify-self: start;
+}
+
 div {
   display: grid;
   grid-template-areas:
