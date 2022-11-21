@@ -88,6 +88,13 @@ export default {
   grid-area: h;
   justify-self: end;
 }
+.likebutton p{
+  margin: 0;
+}
+
+.like img {
+  height: 2em;
+}
 
 .pic1 p {
   grid-area: t;
