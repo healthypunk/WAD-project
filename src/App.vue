@@ -1,7 +1,6 @@
 <template>
   <Header></Header>
   <router-view/>
-  <Footer></Footer>
 </template>
 
 <style>
@@ -28,7 +27,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+
 }
+
 </style>
 <script>
 import Header from "@/components/Header";

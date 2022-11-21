@@ -1,11 +1,21 @@
 <template>
-    <form>
+  <div class="signup" >
+    <form @change="dirty = true">
+      <div class="email">
         <label><b>Email</b></label>
         <input name="email" v-model="username" placeholder="username">
-
+      <br>
+        </div>
+      <div class="passwd">
         <label><b>Password</b></label>
+
         <input name="password" v-model="password" placeholder="password" type="password">
+      <br>
+      </div>
+      <div class="loginbut">
         <button type="button" v-on:click="login()">Login</button>
+      </div>
+      <div v-if="dirty">
         <div v-if="!has_minimum_length">
             <p>Password must be at least 8 chars long, but not longer than 15 chars</p>
         </div>
@@ -21,21 +31,26 @@
         <div v-if="!begins_with_uppercase">
             <p>Password must begin with an uppercase letter</p>
         </div>
+      </div>
     </form>
+  </div>
 </template>
 
 <script>
+import LikeButton from "@/components/LikeButton";
 const regexp = /^(?=.*\d)(?=.+[a-z][a-z])(?=.*[A-Z])(?=.+\_)[A-Z].{7,14}$/
 export default {
     name:"SignUp",
-    data() {
+  components: {LikeButton},
+  data() {
         return {
             password: '',
             has_minimum_length: false,
             has_number: false,
             has_lowercase: false,
             has_special: false,
-            begins_with_uppercase : false
+            begins_with_uppercase : false,
+            dirty: false
         }
     },
     methods: {
@@ -56,3 +71,43 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+.signup {
+  box-sizing: content-box;
+  border-style: groove;
+  border-radius: 10px;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 5vh;
+  margin-inline: 25vw;
+  background-color: rgba(220, 207, 230, 0.4);
+}
+
+.email{
+  margin-right: 2px;
+  margin-bottom: 10px;
+}
+
+.passwd{
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.email label{
+  padding-right: 8px;
+}
+
+.passwd label{
+  padding-right: 8px;
+}
+
+.loginbut{
+  margin-left: 20px;
+}
+
+
+
+</style>

@@ -5,6 +5,7 @@
             :post = "post" />
     </div>
     <button class="resetLikes" v-on:click="resetLikes">Reset likes</button>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -12,16 +13,18 @@
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
 import Post from "@/components/Post";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'HomeView',
   components: {
     Post,
-    Header
+    Header,
+    Footer
   },
   methods: {
     resetLikes: function () {
-      this.$refs.postRef.forEach(post => post.likes = 0)
+      this.postList.forEach(post => post.likes = 0)
     }
   },
   computed: {

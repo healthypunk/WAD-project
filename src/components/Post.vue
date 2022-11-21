@@ -6,10 +6,10 @@
         class="pic1"><img :src="`/pics/${pic}`" :alt="pic" ></a>
     <p>{{text}}</p>
     <div class="likebutton">
-      <a class="like" v-on:click="likes++">
+      <a class="like" v-on:click="post.likes++">
         <img src="@/assets/heart.png" />
       </a>
-      <p>{{likes}}</p>
+      <p>{{post.likes}}</p>
     </div>
   </div>
 </template>
@@ -22,11 +22,11 @@ export default {
   name: "Post",
   components: {LikeButton},
   props: ['post'],
-  data() {
-    return {
-      likes: this.post.likes
-    }
-  },
+  // data() {
+  //   return {
+  //     likes: this.post.likes
+  //   }
+  // },
   computed: {
     pic(){
       return this.post.content.filter(object => object.type === 'pic')[0]?.value
