@@ -5,7 +5,7 @@
     </p>
     </div>
     <div><p>
-      <router-link to="/signup">Signup</router-link>
+      <router-link to="/contactus">Contact Us</router-link>
     </p></div>
   </div>
 </template>

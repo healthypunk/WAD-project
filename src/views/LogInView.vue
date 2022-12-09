@@ -1,21 +1,17 @@
-
 <template>
-  <div class="signup">
-    <SignUp></SignUp>
+  <div class="loginn">
+    <LogIn></LogIn>
     <Footer></Footer>
   </div>
 </template>
+
 <script>
-// @ is an alias to /src
-import SignUp from "@/components/SignUp";
+import LogIn from "@/components/LogIn";
 import Footer from "@/components/Footer";
 
 export default {
-  name: 'SignUpView',
-  components: {
-    SignUp,
-    Footer
-  },
+  name: "LogInView",
+  components: {LogIn, Footer}
 }
 </script>
 
@@ -26,4 +22,5 @@ export default {
   bottom: 0;
   width: 100%;
 }
+
 </style>
