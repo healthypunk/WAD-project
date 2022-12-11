@@ -7,6 +7,9 @@
       <post v-for = "post in posts" :key="post.id" ref="postRef"
             :post = "post" />
     </div>
+    <div>
+      <button v-if = "authResult" @click="DeleteAll"> Delete All Posts</button>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -55,6 +58,18 @@ export default {
             console.log(e);
             console.log("error logout");
           });
+    },
+    DeleteAll(){
+      fetch('http://localhost:3000/api/posts/', {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
   },
 /*  computed: {*/
