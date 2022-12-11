@@ -147,4 +147,13 @@ app.post('/api/posts', async(req, res) => {
        console.error(err.message);
        res.status(400).json({error: err.message});
    }
+
+app.delete('/api/posts', async (req, res) => {
+    console.log('all posts deleted');
+    try{
+        const posts = await pool.query('DELETE FROM posts')
+    }catch (error){
+        console.error(err.message);
+    }
+
 });

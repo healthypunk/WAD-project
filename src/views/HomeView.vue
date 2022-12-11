@@ -9,6 +9,7 @@
     </div>
     <div class="postButtons">
       <button v-if = "authResult" @click="addPost">Add Post</button>
+      <button v-if = "authResult" @click="DeleteAll"> Delete All Posts</button>
     </div>
     <Footer></Footer>
   </div>
@@ -62,6 +63,18 @@ export default {
     addPost() {
       this.$router.push("/addpost")
     }
+    DeleteAll(){
+      fetch('http://localhost:3000/api/posts/', {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
   },
 /*  computed: {*/
 /*  postList(){
