@@ -7,7 +7,8 @@
       <post v-for = "post in posts" :key="post.id" ref="postRef"
             :post = "post" />
     </div>
-    <div>
+    <div class="postButtons">
+      <button v-if = "authResult" @click="addPost">Add Post</button>
       <button v-if = "authResult" @click="DeleteAll"> Delete All Posts</button>
     </div>
     <Footer></Footer>
@@ -59,6 +60,9 @@ export default {
             console.log("error logout");
           });
     },
+    addPost() {
+      this.$router.push("/addpost")
+    },
     DeleteAll(){
       fetch('http://localhost:3000/api/posts/', {
         method: "DELETE",
@@ -66,6 +70,7 @@ export default {
       })
         .then((response) => {
           console.log(response.data);
+          this.$router.push("/")
         })
         .catch((e) => {
           console.log(e);
@@ -96,6 +101,13 @@ export default {
 .container {
   display: flex;
   justify-content: center;
+}
+
+.postButtons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 10px 10px 10px;
 }
 
 .container button {
