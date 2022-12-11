@@ -18,6 +18,7 @@ export default {
 </script>
 
 <style scoped>
+
 .footer {
   text-align: center;
   text-decoration-color: #34495e;
