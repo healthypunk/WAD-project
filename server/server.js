@@ -122,3 +122,12 @@ app.get('/auth/logout', (req, res) => {
     console.log('delete jwt request arrived');
     res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
 });
+
+app.delete('/api/posts', async (req, res) => {
+    console.log('all posts deleted');
+    try{
+        const posts = await pool.query('DELETE FROM posts')
+    }catch (error){
+        console.error(err.message);
+    }
+});
