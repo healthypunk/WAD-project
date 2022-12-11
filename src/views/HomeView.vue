@@ -62,7 +62,7 @@ export default {
     },
     addPost() {
       this.$router.push("/addpost")
-    }
+    },
     DeleteAll(){
       fetch('http://localhost:3000/api/posts/', {
         method: "DELETE",
@@ -70,6 +70,7 @@ export default {
       })
         .then((response) => {
           console.log(response.data);
+          this.$router.push("/")
         })
         .catch((e) => {
           console.log(e);
