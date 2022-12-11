@@ -9,7 +9,6 @@
     </div>
     <div class="postButtons">
       <button v-if = "authResult" @click="addPost">Add Post</button>
-      <button v-if = "authResult">Delete Posts</button>
     </div>
     <Footer></Footer>
   </div>
