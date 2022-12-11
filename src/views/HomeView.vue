@@ -7,6 +7,10 @@
       <post v-for = "post in posts" :key="post.id" ref="postRef"
             :post = "post" />
     </div>
+    <div class="postButtons">
+      <button v-if = "authResult" @click="addPost">Add Post</button>
+      <button v-if = "authResult">Delete Posts</button>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -56,6 +60,9 @@ export default {
             console.log("error logout");
           });
     },
+    addPost() {
+      this.$router.push("/addpost")
+    }
   },
 /*  computed: {*/
 /*  postList(){
@@ -81,6 +88,13 @@ export default {
 .container {
   display: flex;
   justify-content: center;
+}
+
+.postButtons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 10px 10px 10px;
 }
 
 .container button {
