@@ -122,3 +122,29 @@ app.get('/auth/logout', (req, res) => {
     console.log('delete jwt request arrived');
     res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
 });
+
+app.post('/api/posts', async(req, res) => {
+   console.log('request for adding a new post has arrived')
+   try {
+       const {postBody} = req.body
+
+       const currentTime = new Date()
+       const day = currentTime.getDate()
+       const month = currentTime.getMonth()
+       const year = currentTime.getFullYear()
+       const currentDate = `${month}-${day}-${year}`
+
+       console.log(currentDate)
+       const post = await pool.query("INSERT INTO posts(body, post_date) values ($1, $2) RETURNING*",
+           [
+               postBody,
+               currentDate
+           ]
+       )
+       console.log("new post successfully created")
+       res.status(200).send({postId: post.rows[0].id})
+   } catch (err) {
+       console.error(err.message);
+       res.status(400).json({error: err.message});
+   }
+});
