@@ -1,5 +1,5 @@
 <template>
-  <div class="post no-img">
+  <div class="post no-img" @click="openPost">
     <h1><a class="logo"><img src="@/assets/ico.png" alt=""></a></h1>
     <h2>{{date}}</h2>
 <!--    <a v-if = "pic"
@@ -33,6 +33,11 @@ export default {
       const date2 = date.toLocaleString('en-UK', {day: "2-digit", month: 'short', year: 'numeric'})
       return date2
     }
+  },
+  methods: {
+    openPost() {
+      this.$router.push(`/post/${this.post.id}`)
+    }
   }
 }
 
@@ -43,6 +48,7 @@ export default {
 
 .post:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 .logo img {
   height: 3.6vw;

@@ -106,17 +106,51 @@ app.post('/auth/login', async(req, res) => {
     }
 });
 
-app.get('/api/posts', async(res, req)=>{
+app.get('/api/posts', async(req, res)=>{
     console.log('get posts request has arrived');
     try {
-        const posts = await pool.query("SELECT * FROM posts");
+        const posts = await pool.query("SELECT * FROM posts ORDER BY id ASC");
         console.log(posts.rows[0])
-        req.json(posts.rows);
+        res.json(posts.rows);
     }catch (error){
         res.status(401).json({error: error.message});
     }
-})
+});
 
+app.get('/api/post/:id', async(req, res)=>{
+    const id = req.params.id
+    console.log(`get post with id ${id} request has arrived`);
+    try {
+        const post = await pool.query("SELECT * FROM posts WHERE id = $1", [id]);
+        console.log(post.rows[0])
+        res.json(post.rows[0]);
+    }catch (error){
+        res.status(404).json({error: error.message});
+    }
+});
+
+app.put("/api/posts", async(req, res) => {
+    const {id, postBody} = req.body
+    console.log(`updating post ${id}`)
+
+    const currentTime = new Date()
+    const day = currentTime.getDate()
+    const month = currentTime.getMonth()
+    const year = currentTime.getFullYear()
+    const currentDate = `${month}-${day}-${year}`
+    try {
+        const post = await pool.query("UPDATE posts SET id = $1, body = $2, post_date = $3 WHERE id = $1",
+            [
+                id,
+                postBody,
+                currentDate
+            ])
+        res.status(200).json({message: "success"})
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    }
+
+});
 //logout a user = deletes the jwt
 app.get('/auth/logout', (req, res) => {
     console.log('delete jwt request arrived');
@@ -151,10 +185,24 @@ app.post('/api/posts', async(req, res) => {
 
 app.delete('/api/posts', async (req, res) => {
     console.log('all posts deleted');
-    try{
+    try {
         const posts = await pool.query('DELETE FROM posts')
-    }catch (error){
-        console.error(err.message);
+        res.status(200).json({message: 'success'})
+    } catch (error) {
+        console.error(error.message);
+        res.status(400).json({error: error.message});
     }
+});
 
+app.delete('/api/posts/:id', async(req, res) => {
+    const id = req.params.id
+    console.log(`deleting post ${id}`)
+    try {
+        const post = await pool.query('DELETE FROM posts WHERE id = $1', [id])
+        console.log("delete success")
+        res.status(200).json({message: success})
+    } catch (error) {
+        console.error(error.message);
+        res.status(400).json({error: error.message});
+    }
 });
