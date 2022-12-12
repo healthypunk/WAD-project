@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import auth from "@/auth";
+import PostView from "@/views/PostView";
 
 const routes = [
   {
@@ -44,6 +45,12 @@ const routes = [
     path: '/addpost',
     name: 'addpost',
     component: () => import('../views/AddPostView.vue')
+  },
+  {
+    path: '/post/:id',
+    name: 'postPage',
+    component: PostView,
+    props: true
   }
 ]
 
